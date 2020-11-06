@@ -1,0 +1,29 @@
+{
+  "name": "repo-health-check",
+  "version": "1.0.0",
+  "description": "repo healthcheck app",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "functions-framework --target=repoHealthCheck",
+    "deploy": "gcloud functions deploy repoHealthCheck --runtime=nodejs10 --trigger-http --region=us-east1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisVillanueva/repoHealthCheck.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisVillanueva/repoHealthCheck/issues"
+  },
+  "homepage": "https://github.com/chrisVillanueva/repoHealthCheck#readme",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^1.7.1",
+    "@google-cloud/secret-manager": "^3.2.0",
+    "@google-cloud/storage": "^5.4.0",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.1",
+    "qim": "0.0.52"
+  }
+}
